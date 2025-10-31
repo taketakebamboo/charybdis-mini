@@ -2,11 +2,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
-#include <dt-bindings/zmk/pointing.h>
-
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
-
 
 
 &lt {
@@ -57,7 +52,7 @@
             bindings = <
 &none             &none       &none       &none          &none          &none           &none           &none           &none         &none            &none    &none
 &kp LS(GRAVE)     &kp LS(N1)  &kp LS(N2)  &kp LS(N3)     &kp LS(N4)     &kp LS(LBKT)    &trans          &none           &trans        &none            &none    &kp DEL
-&kp LEFT_CONTROL  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &none           &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans   &trans
+&kp LEFT_CONTROL  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &none           &trans          &trans          &trans        &trans           &trans   &trans
 &kp LEFT_SHIFT    &kp LS(N9)  &kp LS(N0)  &kp LS(MINUS)  &kp LS(EQUAL)  &none           &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans   &trans
                                           &kp LEFT_ALT   &kp SPACE      &kp ENTER       &trans          &kp BACKSPACE
                                                                &none         &none          &trans
@@ -68,7 +63,7 @@
             bindings = <
 &none        &none         &none         &none         &none      &none         &none           &none           &none         &none            &none         &none
 &none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none      &bt BT_CLR    &bt BT_CLR      &none           &bt BT_SEL 2  &bt BT_SEL 1     &bt BT_SEL 0  &none
-&none        &trans        &trans        &mkp MCLK     &trans     &none         &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans        &none
+&none        &trans        &trans        &mkp MCLK     &trans     &none         &trans          &trans          &trans        &trans           &trans        &none
 &bootloader  &trans        &mkp RCLK     &mo 4         &mkp LCLK  &mo 5         &mo 5           &mkp LCLK       &mkp MCLK     &mkp RCLK        &mo 4         &bootloader
                                          &mo 5         &mkp LCLK  &mkp RCLK     &mkp RCLK       &mkp LCLK
                                                                &none         &none              &trans
